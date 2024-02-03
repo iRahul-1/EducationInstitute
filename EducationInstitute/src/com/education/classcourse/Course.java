@@ -6,8 +6,7 @@ public class Course {
 	double fee;
 	
 	public Course() {
-		super();
-		// TODO Auto-generated constructor stub
+		super();	
 	}
 	public Course(int id, String name, double fee) {
 		super();

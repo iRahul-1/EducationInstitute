@@ -49,9 +49,88 @@ public class EducationInstituteApp {
 				}
 			};
 			t1.start();
-		case 2:
-		case 3:
-		case 4:
+         case 2:
+             Course[] course2 = new Course[] {
+                 new Course(200, "Advanced JAVA", 30000),
+                 new Course(201, "Spring Framework", 35000),
+                 new Course(202, "Hibernate", 25000)
+             };
+             Offer[] offer2 = new Offer[] {
+                 new Offer("Early bird discount: Enroll now and get 15% off!")
+             };
+             System.out.print("You Selected Option 2: ");
+             System.out.println();
+             System.out.print("Enter your name: ");
+             String name2 = sc.next();
+             EducationInstitute e2 = new EducationInstitute(course2, offer2);
+             Student s2 = new Student(name2, e2);
+             Thread t2 = new Thread() {
+                 public void run() {
+                     System.out.println("Available Course:");
+                     s2.viewCoursesAndFees();
+                     System.out.println("Available Offer:");
+                     s2.viewOffers();
+                     System.out.println("Student:");
+                     s2.enrollInCourse(200);
+                 }
+             };
+             t2.start();
+             break;
+         case 3:
+             Course[] course3 = new Course[] {
+                 new Course(300, "Python for Data Science", 20000),
+                 new Course(301, "Machine Learning with Python", 30000),
+                 new Course(302, "Django Web Development", 25000)
+             };
+             Offer[] offer3 = new Offer[] {
+                 new Offer("Limited time offer: Get 10% off on all Python courses!")
+             };
+             System.out.print("You Selected Option 3: ");
+             System.out.println();
+             System.out.print("Enter your name: ");
+             String name3 = sc.next();
+             EducationInstitute e3 = new EducationInstitute(course3, offer3);
+             Student s3 = new Student(name3, e3);
+             Thread t3 = new Thread() {
+                 public void run() {
+                     System.out.println("Available Course:");
+                     s3.viewCoursesAndFees();
+                     System.out.println("Available Offer:");
+                     s3.viewOffers();
+                     System.out.println("Student:");
+                     s3.enrollInCourse(300);
+                 }
+             };
+             t3.start();
+             break;
+         case 4:
+             Course[] course4 = new Course[] {
+                 new Course(400, "Oracle Database Administration", 15000),
+                 new Course(401, "SQL Fundamentals", 10000)
+             };
+             Offer[] offer4 = new Offer[] {
+                 new Offer("Limited seats available: Enroll now and get 5% off!")
+             };
+             System.out.print("You Selected Option 4: ");
+             System.out.println();
+             System.out.print("Enter your name: ");
+             String name4 = sc.next();
+             EducationInstitute e4 = new EducationInstitute(course4, offer4);
+             Student s4 = new Student(name4, e4);
+             Thread t4 = new Thread() {
+                 public void run() {
+                     System.out.println("Available Course:");
+                     s4.viewCoursesAndFees();
+                     System.out.println("Available Offer:");
+                     s4.viewOffers();
+                     System.out.println("Student:");
+                     s4.enrollInCourse(400);
+                 }
+             };
+             t4.start();
+             break;
+         default:
+             System.out.println("Invalid option selected!");
 		}
 		sc.close();
 
